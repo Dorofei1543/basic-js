@@ -23,8 +23,8 @@ export default function repeater(str, options) {
         arrAddition.push(String(options.addition))
       }
       if(options.additionSeparator){
-       arrAddition = arrAddition.join(options.additionSeparator);
-      }else{
+      arrAddition = arrAddition.join(options.additionSeparator);
+    }else{
         arrAddition = arrAddition.join('|')
       }
       str += arrAddition;
