@@ -18,7 +18,7 @@ const HALF_LIFE_PERIOD = 5730;
  *
  */
 export default function dateSample(sampleActivity) {
-if (isNaN(sampleActivity)) return false;
-  
+  if(!sampleActivity || typeof sampleActivity !== 'string' || isNaN(sampleActivity) || sampleActivity > MODERN_ACTIVITY || sampleActivity <= 0) return false;
+  return Math.abs(Math.floor(Math.log(sampleActivity/MODERN_ACTIVITY)/(0.693/HALF_LIFE_PERIOD)))
   // remove line with error and write your code here
 }
